@@ -1,0 +1,4 @@
+data/test/
+*.zip
+results/
+TransWeather_weights/*
