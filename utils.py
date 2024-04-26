@@ -174,7 +174,7 @@ def save_image(pred_image, image_name, exp_name, category):
     
     for ind in range(batch_num):
         image_name_1 = image_name[ind].split('/')[-1]
-        print(image_name_1)
+        #print(image_name_1)
         utils.save_image(pred_image_images[ind], './results/{}/{}/{}'.format(category,exp_name,image_name_1))
 
 
