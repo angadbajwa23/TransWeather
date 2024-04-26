@@ -168,6 +168,20 @@ def custom_valildation_val(net, val_data_loader, device, exp_name, category, sav
 
 
 
+def custom_save_image(pred_image, image_name, exp_name, category):
+    pred_image_images = torch.split(pred_image, 1, dim=0)
+    # batch_num = len(pred_image_images)
+    image_name_1 = image_name
+    #print("image name",image_name)
+    #print("img extension",image_name_1)
+    #print(image_name_1)
+    utils.save_image(pred_image_images[0], './results/{}/{}/{}'.format(category,exp_name,image_name_1))
+    # for ind in range(batch_num):
+    #     image_name_1 = image_name[ind].split('/')[-1]
+    #     #print(image_name_1)
+    #     utils.save_image(pred_image_images[ind], './results/{}/{}/{}'.format(category,exp_name,image_name_1))
+
+
 def save_image(pred_image, image_name, exp_name, category):
     pred_image_images = torch.split(pred_image, 1, dim=0)
     batch_num = len(pred_image_images)
